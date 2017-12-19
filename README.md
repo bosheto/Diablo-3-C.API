@@ -39,14 +39,26 @@ A python3 module for accessing the Diablo 3 Comunity API
   
  ## get carrer profile
  The get_career_function(battleTag) returns career profile information takes a BattleTag string ex. 'Example#0000' 
- 
+
+     out = api.get_career_function('Example#0000')
+     print(out['battleTag'])  
+     'Example#0000'
+     
  ## get hero profile 
  The get get_hero_profie(battleTag, heroId) returns a hero information takes a BattleTag string and a hero id int
  you get the hero id from the return of get_career_profile
  
+     out = api.get_hero_profile('Example#0000', 00000000)
+     print(out['name'])
+     'Hero name'
+     
  ## get item data 
  The get_item_data(itemdata) function returns the item data for a given item takes itemdata string
- 
+     
+     out = api.get_item_data('example item data')
+     print(out['name'])
+     'Sly Shot'
+     
  ## Credits 
  A big thank you to blizzard for providing the API 
  
